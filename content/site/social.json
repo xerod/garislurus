@@ -1,0 +1,19 @@
+{
+  "social": [
+    {
+      "name": "Whatsapp",
+      "link": "https://wa.me/628118464644",
+      "icon": ["fab", "whatsapp"]
+    },
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/engkakreatif/",
+      "icon": ["fab", "instagram"]
+    },
+    {
+      "name": "Email",
+      "link": "mailto:marketing@engkakreatif.co.id",
+      "icon": ["fas", "envelope"]
+    }
+  ]
+}
