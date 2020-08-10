@@ -2,17 +2,18 @@
   <Layout>
     <content-header
       id="header"
-      title="Build stunning event with us"
-      sub="Berbekal pengalaman tim kami selama bertahun-tahun di industri MICE, kami terus berusaha menyediakan solusi bisnis dengan standar terbaik industri."
-      image="header_frame.jpg"
+      title="Deliver faster with our leading IT resources"
+      sub="With long experience in a variety of characters and a variety of HR credentials, we aim to establish sustainable businesses ecosystem and being the leading player in the regional market for human capital services"
+      image="header_frame.jpeg"
       mode="homepage"
       :opacity="75"
     >
     </content-header>
+    <introduction />
     <mission-section id="mission" />
-    <industry-section id="industry" />
+    <!-- <industry-section id="industry" />
     <calendar-section class="md:-mb-20" id="calendar" />
-    <team-section id="team" />
+    <team-section id="team" /> -->
 
     <!-- <EventCard /> -->
   </Layout>
@@ -74,6 +75,7 @@ import TeamSection from "~/components/Content/TeamSection";
 import CardItem from "~/components/Content/CardItem.vue";
 import FeaturedCard from "~/components/Content/FeaturedCard.vue";
 import ContentHeader from "~/components/Partials/ContentHeader.vue";
+import Introduction from "~/components/Content/Introduction.vue";
 
 export default {
   metaInfo: {
@@ -90,6 +92,7 @@ export default {
     IndustrySection,
     CalendarSection,
     TeamSection,
+    Introduction,
   },
 };
 </script>

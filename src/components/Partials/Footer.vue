@@ -1,7 +1,12 @@
 <template>
   <div id="footer">
     <div
-      class="relative text-white bg-blue-700 w-full md:w-10/12 lg:w-8/12 mx-auto -mb-20 z-1000 px-6 pt-6 pb-12 md:p-12"
+      class="relative text-white bg-blue-700 w-full mx-auto -mb-20 z-1000 px-6 pt-6 pb-12 md:p-12"
+      :style="
+        'background-image: url(' +
+          require('@/assets/images/lighter-pattern.svg') +
+          ')'
+      "
     >
       <div class="flex flex-col items-center md:flex-row justify-between">
         <p
@@ -40,11 +45,7 @@
       >
         <div class="flex-col items-left text-left">
           <div class="flex items-left mb-4">
-            <Logo class="h-16 w-16 md:w-12 md:h-12 mr-3 mb-4" />
-            <span
-              class="w-1/12 md:w-2/12 text-lg md:text-sm text-left leading-tight uppercase text-white tracking-tight"
-              >{{ $static.metadata.siteName }}</span
-            >
+            <Logo class="h-16 w-16 md:w-32 md:h-32 mr-3 mb-4" />
           </div>
         </div>
         <div class="flex-col items-left text-left md:items-right md:text-right">
@@ -88,7 +89,7 @@
         <div class="flex-col items-left text-left">
           <div class="md:mb-4">
             <p>
-              © {{ new Date().getFullYear() }} PT
+              © {{ new Date().getFullYear() }}
               {{ $static.metadata.siteName }} &middot; Powered by
               <a
                 href="https://www.gridsome.org"

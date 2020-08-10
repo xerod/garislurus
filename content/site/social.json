@@ -7,12 +7,12 @@
     },
     {
       "name": "Instagram",
-      "link": "https://www.instagram.com/engkakreatif/",
+      "link": "https://www.instagram.com/garislurus/",
       "icon": ["fab", "instagram"]
     },
     {
       "name": "Email",
-      "link": "mailto:marketing@engkakreatif.co.id",
+      "link": "mailto:marketing@garislurusindonesia.co.id",
       "icon": ["fas", "envelope"]
     }
   ]

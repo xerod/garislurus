@@ -22,15 +22,15 @@ module.exports = {
     extend: {
       colors: {
         blue: {
-          100: "#EAEFF7",
-          200: "#CAD7EB",
-          300: "#ABBFDF",
-          400: "#6B8EC7",
-          500: "#2C5EAF",
-          600: "#28559E",
-          700: "#1A3869",
-          800: "#142A4F",
-          900: "#0D1C35",
+          100: "#E6F4F7",
+          200: "#C0E5EB",
+          300: "#99D5DF",
+          400: "#4DB5C8",
+          500: "#0195B0",
+          600: "#01869E",
+          700: "#01596A",
+          800: "#00434F",
+          900: "#002D35",
         },
       },
       height: {
@@ -53,7 +53,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '"Source Sans Pro"',
+        '"Maven Pro"',
         '"Segoe UI"',
         '"Helvetica Neue"',
         "Arial",
@@ -91,6 +91,8 @@ module.exports = {
       auto: "auto",
     },
     boxShadow: {
+      xs: "0 0 0 1px rgba(0, 0, 0, 0.05)",
+      sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
       default: "0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)",
       md: "0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06)",
       lg:

@@ -5,20 +5,28 @@
         :classes="{
           initial: 'headroom bg-transparent text-white',
           top: 'headroom bg-transparent text-white',
-          notTop: 'headroom bg-gray-200 text-gray-900',
+          notTop: 'headroom bg-white shadow-md text-blue-900',
         }"
         :downTolerance="10"
         :upTolerance="10"
         :offset="40"
-        @unpin="navbarUnpinned = true"
-        @pin="navbarUnpinned = true"
+        @top="navbarTop()"
+        @not-top="navbarNotTop()"
       >
-        <navbar-desktop
-          v-on="$listeners"
-          @openSearchModal="openSearchModal"
-          :theme="theme"
-          :hideSubnav="this.navbarUnpinned"
-        />
+        <div class="flex justify-between">
+          <!-- <Logo width="100" class="ml-6 mr-2" /> -->
+          <g-image
+            class="w-20 md:w-24 mt-4 md:mt-0 ml-6 mr-2"
+            :src="require('@/assets/images/' + this.image)"
+          />
+          <navbar-desktop
+            v-on="$listeners"
+            @openSearchModal="openSearchModal"
+            :theme="theme"
+            :hideSubnav="this.navbarUnpinned"
+          >
+          </navbar-desktop>
+        </div>
 
         <!-- <navbar-mobile
           @openSearchModal="openSearchModal"
@@ -46,6 +54,7 @@ import Modal from "~/components/Modal/Modal.vue";
 import SearchModal from "~/components/Modal/SearchModal.vue";
 import NavbarModal from "~/components/Modal/NavbarMobileModal.vue";
 import { headroom } from "vue-headroom";
+import Logo from "~/assets/Logo";
 
 export default {
   props: {
@@ -59,6 +68,7 @@ export default {
       showNavbarModal: false,
       headerHeight: 100,
       navbarUnpinned: false,
+      image: "logo_white.svg",
     };
   },
   components: {
@@ -68,6 +78,7 @@ export default {
     SearchModal,
     NavbarModal,
     headroom,
+    Logo,
   },
   methods: {
     openSearchModal() {
@@ -81,6 +92,12 @@ export default {
     },
     closeNavbarModal() {
       this.showNavbarModal = false;
+    },
+    navbarTop() {
+      this.image = "logo_white.svg";
+    },
+    navbarNotTop() {
+      this.image = "logo_coloured.svg";
     },
   },
   watch: {

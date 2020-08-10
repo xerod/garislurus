@@ -15,7 +15,7 @@
     <div
       v-if="hasImage || this.video"
       class="z-100 relative mt-0"
-      :class="mode != null ? 'min-h-screen' : 'h-auto'"
+      :class="mode != null ? 'md:min-h-screen' : 'h-auto'"
     >
       <g-image
         v-if="hasImage && staticImage"
@@ -41,33 +41,21 @@
             :img="require('@/assets/images/' + this.image)"
           >
             <div
-              class="flex flex-col min-h-screen text-left text-white bg-blue-900 pb-20"
+              class="flex flex-col md:min-h-screen text-left text-white bg-blue-900 pb-20"
               :class="`bg-opacity-${opacity}`"
             >
-              <nav
-                class="md:hidden flex items-left justify-start flex-wrap dark:text-gray-400"
-              >
-                <div class="flex items-left p-4">
-                  <Logo height="40" width="40" class="mr-2 mt-2" />
-                  <span
-                    class="w-12 mt-2 text-xs font-semibold leading-tight uppercase text-white text-left tracking-tight"
-                    style="font-size: .7rem"
-                    >Engka Kreatif Indonesia</span
-                  >
-                </div>
-              </nav>
               <div
                 class="flex-col mx-4 md:ml-56 md:mt-20 items-center justify-center text-left"
               >
                 <p
                   v-if="title != null"
-                  class="text-5xl mx-auto md:mx-0 sm:w-8/12 md:text-6xl mt-16 md:w-5/12 font-bold tracking leading-none"
+                  class="text-5xl mx-auto md:mx-0 sm:w-8/12 md:text-6xl mt-16 md:w-5/12 font-normal tracking leading-none"
                 >
                   {{ title }}
                 </p>
                 <p
                   v-if="sub != null"
-                  class="text-xl md:text-2xl my-4 mx-auto md:mx-0 sm:w-8/12 md:w-6/12 font-sans"
+                  class="text-xl md:text-2xl my-4 mx-auto md:mx-0 sm:w-8/12 md:w-6/12"
                 >
                   {{ sub }}
                 </p>
@@ -93,33 +81,21 @@
           </video-bg>
           <div
             v-else
-            class="flex flex-col min-h-screen text-left text-white bg-blue-900 pb-20"
+            class="flex flex-col md:min-h-screen text-left text-white bg-blue-900 pb-20"
             :class="`bg-opacity-${opacity}`"
           >
-            <nav
-              class="md:hidden flex items-left justify-start flex-wrap dark:text-gray-400"
-            >
-              <div class="flex items-left p-4">
-                <Logo height="40" width="40" class="mr-2 mt-2" />
-                <span
-                  class="w-12 mt-2 text-xs font-semibold leading-tight uppercase text-white text-left tracking-tight"
-                  style="font-size: .7rem"
-                  >Engka Kreatif Indonesia</span
-                >
-              </div>
-            </nav>
             <div
-              class="flex-col mx-4 md:ml-56 md:mt-20 items-center justify-center text-left"
+              class="flex-col max-w-screen-xl mx-auto pl-4 md:mt-20 items-center justify-center text-left"
             >
               <p
                 v-if="title != null"
-                class="text-5xl mx-auto md:mx-0 sm:w-8/12 md:text-6xl mt-16 md:w-5/12 font-bold tracking leading-none"
+                class="text-5xl mx-auto md:mx-0 sm:w-8/12 md:text-6xl mt-16 md:w-5/12 tracking leading-none"
               >
                 {{ title }}
               </p>
               <p
                 v-if="sub != null"
-                class="text-xl md:text-2xl my-4 mx-auto md:mx-0 sm:w-8/12 md:w-6/12 font-sans"
+                class="text-xl md:text-2xl my-4 mx-auto md:mx-0 sm:w-8/12 md:w-6/12"
               >
                 {{ sub }}
               </p>
@@ -141,62 +117,6 @@
           </div>
         </ClientOnly>
       </slot>
-    </div>
-
-    <div
-      v-if="mode != null"
-      class="flex h-40 justify-center items-center bg-blue-700"
-    >
-      <div
-        class="flex w-4/12 md:w-2/12 pl-8 flex-col justify-center content-center items-start"
-      >
-        <p class="text-white leading-none tracking-wider">
-          We work with
-        </p>
-        <p class="text-white text-4xl md:text-5xl font-bold leading-tight">
-          40+
-        </p>
-        <p class="text-white leading-none tracking-wider">
-          companies
-        </p>
-      </div>
-
-      <div
-        class="scrolling relative whitespace-no-wrap scrolling-touch w-full px-8"
-      >
-        <NetLogo
-          width="150"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <SpotifyLogo
-          width="150"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <SamsungLogo
-          width="150"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <SmartfrenLogo
-          width="150"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <TvriLogo
-          width="120"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <Trans7Logo
-          width="120"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <YamahaLogo
-          width="120"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-        <PodomoroLogo
-          width="120"
-          class="inline-flex text-white mr-12 flex-shrink-0"
-        />
-      </div>
     </div>
   </div>
 </template>
@@ -259,6 +179,13 @@ export default {
   computed: {
     hasImage() {
       return this.image ? true : false;
+    },
+    getBackground() {
+      return (
+        "background-image: url(" +
+        require("@/assets/images/" + this.image) +
+        ")"
+      );
     },
   },
 };

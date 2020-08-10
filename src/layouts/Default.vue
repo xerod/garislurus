@@ -1,6 +1,10 @@
 <template>
   <div id="app" class="dark:bg-black">
-    <navbar @setTheme="setTheme" :theme="this.theme"></navbar>
+    <navbar
+      @setTheme="setTheme"
+      :theme="this.theme"
+      class="max-w-screen-xl mx-auto"
+    ></navbar>
 
     <slot />
 
@@ -22,17 +26,17 @@ import VFooter from "~/components/Partials/Footer.vue";
 export default {
   data: function() {
     return {
-      theme: "light"
+      theme: "light",
     };
   },
   components: {
     Navbar,
-    VFooter
+    VFooter,
   },
   methods: {
     setTheme(mode) {
       this.theme = mode;
-    }
-  }
+    },
+  },
 };
 </script>

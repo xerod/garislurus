@@ -1,49 +1,57 @@
 <template>
-  <div class="px-8 py-10 md:py-20">
-    <div class="flex flex-col md:flex-row">
-      <a class="text-5xl mb-12 font-bold leading-none dark:text-gray-400"
-        >Misi Kami</a
+  <div
+    class="px-8 py-10 md:py-20"
+    :style="
+      'background-image: url(' +
+        require('@/assets/images/lighter-pattern.svg') +
+        ')'
+    "
+  >
+    <div class="flex flex-col items-center">
+      <a
+        class="text-sm mb-2 font-semibold text-blue-700 leading-none uppercase dark:text-gray-400"
+        >Solutions</a
+      >
+      <a class="text-5xl mb-20 font-normal leading-none dark:text-gray-400"
+        >We Provide</a
       >
       <div class="w-4/6" />
       <div
-        class="grid grid-flow-row lg:grid-cols-2 lg:grid-rows-2 gap-8 font-body font-light text-gray-900 tracking-wide text-lg dark:text-gray-400"
+        class="w-full md:w-10/12 grid grid-flow-row gap-8 lg:grid-cols-3 lg:grid-rows-1 font-body font-light text-gray-900 tracking-wide text-lg dark:text-gray-400 bg-white"
       >
-        <div class="bg-gray-300 rounded px-12 py-10">
-          <RefreshIcon size="2.5x" class="text-gray-800" />
-          <h4 class="leading-none font-semibold mt-6 mb-2">Bersikap Adaptif</h4>
-          <a
-            >Memberikan ide kreatif dan inovatif serta selalu bersikap adaptif
-            terhadap perkembangan teknologi</a
+        <div
+          class="featured-post-card shadow hover:shadow-lg border border-gray-200 rounded-lg px-8 py-10"
+        >
+          <RefreshIcon size="2.5x" class="text-blue-600" />
+          <h4 class="leading-none mt-6 mb-2">Human Resource</h4>
+          <a class="leading-none"
+            >Top skills draw great employers. We provide talent acquisition,
+            training, employee administration and retention services for company
+            accross Indonesia.</a
           >
         </div>
-        <div class="bg-gray-300 rounded px-12 py-10">
-          <LightBulbIcon size="2.5x" class="text-gray-800" />
-          <h4 class="leading-none font-semibold mt-6 mb-2">
-            Menghadirkan Solusi
+        <div
+          class="featured-post-card shadow hover:shadow-lg border border-gray-200 rounded-lg px-8 py-10"
+        >
+          <LightBulbIcon size="2.5x" class="text-blue-600" />
+          <h4 class="leading-none mt-6 mb-2">
+            Voice Channel
           </h4>
-          <a
-            >Memberikan solusi efektif untuk setiap masalah yang dihadapi mitra
-            bisnis</a
+          <a class="leading-none"
+            >Our voice channel services include telemarketing, call center, and
+            tele-collection.</a
           >
         </div>
-        <div class="bg-gray-300 rounded px-12 py-10">
-          <LinkIcon size="2.5x" class="text-gray-800" />
-          <h4 class="leading-none font-semibold mt-6 mb-2">
-            Memprioritaskan Hubungan
+        <div
+          class="featured-post-card shadow hover:shadow-lg border border-gray-200 rounded-lg px-8 py-10"
+        >
+          <LinkIcon size="2.5x" class="text-blue-600" />
+          <h4 class="leading-none mt-6 mb-2">
+            Non-voice Channel
           </h4>
-          <a
-            >Mengedepankan rasa persaudaraan dan rasa saling memiliki terhadap
-            perusahaan</a
-          >
-        </div>
-        <div class="bg-gray-300 rounded px-12 py-10">
-          <ThumbUpIcon size="2.5x" class="text-gray-800" />
-          <h4 class="leading-none font-semibold mt-6 mb-2">
-            Mengedepankan Kualitas
-          </h4>
-          <a
-            >Menciptakan event yang berkualitas dan inovatif dengan menjunjung
-            tinggi etika bisnis</a
+          <a class="leading-none"
+            >We provide data entry, mobile survey, and field sales to fulfill
+            your IT Company business needs.</a
           >
         </div>
       </div>
