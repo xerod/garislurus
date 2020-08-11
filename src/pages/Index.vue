@@ -2,7 +2,7 @@
   <Layout>
     <content-header
       id="header"
-      title="Deliver faster with our leading IT resources"
+      title="Deliver faster with our leading human resources"
       sub="With long experience in a variety of characters and a variety of HR credentials, we aim to establish sustainable businesses ecosystem and being the leading player in the regional market for human capital services"
       image="header_frame.jpeg"
       mode="homepage"

@@ -71,7 +71,7 @@
                   >
                   <p class="flex items-center px-3">atau</p>
                   <a
-                    href="https://wa.me/628118464644"
+                    href="https://wa.me/6281281902724"
                     class="flex underline text-gray-300 items-center font-medium"
                     >Jadwalkan Meeting</a
                   >
@@ -108,7 +108,7 @@
                 >
                 <p class="flex items-center px-3">atau</p>
                 <a
-                  href="https://wa.me/628118464644"
+                  href="https://wa.me/6281281902724"
                   class="flex underline text-gray-300 items-center font-medium"
                   >Jadwalkan Meeting</a
                 >

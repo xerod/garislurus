@@ -22,13 +22,13 @@
         <div class="flex mt-12 items-center md:m-0 flex-col justify-center">
           <div class="space-x-2 text-right">
             <a
-              href="https://wa.me/628118464644"
+              href="https://wa.me/6281281902724"
               class="bg-white text-blue-800 rounded p-4"
               ><font-awesome
                 :icon="['fab', 'whatsapp']"
                 size="lg"
                 class="mr-2"
-              />(+62) 811-8464-644</a
+              />(+62) 81281902724</a
             >
           </div>
 
@@ -51,13 +51,13 @@
         <div class="flex-col items-left text-left md:items-right md:text-right">
           <div class="flex flex-col text-left md:text-right mb-4">
             <span>
-              Graha Engka
+              Garis Lurus Indonesia
             </span>
             <span>
-              Jl. poltangan raya No.48,
+              Jl. Poltangan Raya 22,
             </span>
             <span>
-              Jakarta Selatan
+              Jakarta Selatan, 12350
             </span>
           </div>
           <div class="mb-4">
